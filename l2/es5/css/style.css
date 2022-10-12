@@ -1,0 +1,87 @@
+a:hover{
+    /*quando l'utente passa il mouse su questo tag*/
+}
+
+a:active{
+    /*quanto l'utente sta cliccando sull'elemento*/
+}
+
+a:visited{
+    /*quanto il link è già stato visitato*/
+}
+
+input:focus{
+    /*l'utente ha selezionato il campo*/
+    border: 10px solid green
+}
+
+/*header*/
+#main-header{
+    background-color: purple;
+}
+#main-header, #main-header nav, #main-header nav, #main-header nav li{
+    height: 70px;
+}
+
+#main-header nav ul{
+    text-align: center;
+}
+
+
+#main-header nav li {
+    display: inline-block;
+    padding: 0 5px;
+}
+#main-header nav li.has-children > a::after{
+    content:">";
+    display: inline-block;
+    margin-left: 3px;
+    transition: transform 0.5s;
+}
+#main-header nav li.has-children:hover > a::after{
+    content:">";
+    display: inline-block;
+    margin-left: 3px;
+    transform: rotate(90deg);
+}
+
+
+#main-header nav li a{
+    color: #fff;
+    text-decoration: none;
+    line-height: 70px;
+    display: block;
+    height: 100%;
+}
+
+#main-header nav li:hover {
+    background-color: white;
+}
+#main-header nav li:hover a{
+    color: purple;
+}
+
+
+/*sottomenu*/
+
+#main-header nav li.has-children > ul{
+    position: absolute;
+    background-color: #5d005d;
+    width: 200px;
+    /*display:none;*/
+    height: 0;
+    transition: all 0.3s;
+}
+#main-header nav li.has-children:hover > ul{
+    height: 150px;
+    /*display:block;*/
+}
+#main-header nav li.has-children > ul li{
+    display:block
+}
+
+.blocco{
+    background-color:aqua;
+    height: 100vh;
+    width: 50vw;
+}

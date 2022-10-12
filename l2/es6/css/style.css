@@ -1,0 +1,29 @@
+.esempio-absolute{
+    background-color: aqua;
+    height: 50vh;
+    width: 50vh;
+    margin:30px auto;
+    position:relative;
+}
+.esempio-absolute > div{
+    height: 100px;
+    width: 100px;
+    background-color:red;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    position: absolute;
+}
+
+.esempio-absolute > div:nth-child(4){
+    bottom: 0;
+    right: 0;
+}
+.esempio-absolute > div:nth-child(3){
+    bottom: 0;
+    left: 0;
+}
+.esempio-absolute > div:nth-child(2){
+    top: 0;
+    right: 0;
+}

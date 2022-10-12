@@ -1,0 +1,70 @@
+img{
+    max-width: 100%;
+}
+#contenitore{
+    background-color: blue;
+    width: 100px;
+}
+
+#contenitore2{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin-top:30px
+}
+#contenitore2 img{
+    max-width: none;
+    margin-left:-10px;
+    margin-left: -65px;
+    margin-top: -73px;
+}
+
+/*
+css background
+*/
+
+.bg1{
+    width: 100px;
+    height: 130px;
+    background-image: url(../img/download.png);
+    background-size: contain;
+    /*background-size: 50px 100px; => x:50px, y:100px*/
+    background-repeat:no-repeat;
+    background-color: aqua;
+}
+
+.bg2{
+    width: 100px;
+    height: 130px;
+    background-image: url(../img/download.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg3{
+    width: 200px;
+    height: 200px;
+    background-image: url(../img/download.png), url(../img/logo-g3dfe94058_1920.png);
+    background-size: 50px 50px, 150px 150px;
+    background-repeat: no-repeat;
+    background-position: left center, right center;
+    border: 1px solid #000;
+}
+
+.area-testo{
+    position: relative;
+}
+
+.bg-area-testo{
+    background-image: url(https://picsum.photos/200/300);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.5;
+    top: 0px;
+    left: 0px;
+    background-attachment: fixed;
+}
+

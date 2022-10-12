@@ -1,0 +1,55 @@
+div{/* peso: 1 */
+    color:red
+}
+#green{/* peso : 100*/
+    color: green;
+}
+.blue{/* peso: 10*/
+    color: blue;
+}
+
+div:nth-of-type(3){/* prendi il terzo div che appare dall'alto in ogni insieme */
+    background-color: black
+}
+
+#sezione-es div{/* peso: 100 + 1*/
+    color: black;
+    background-color:transparent;
+    font-size: 1rem;
+}
+#sezione-es > div{
+    font-size: 2rem;
+}
+
+#sezione-es h3.blue{/* peso: 100 + 1 + 10*/
+    color: blue;
+}
+#sezione-es h3{/* peso: 100 + 1*/
+    color: purple;
+}
+/*
+
+nometag#nomeid{}
+nometag.nomeclasse{}
+.nomeclasse.nomesecondaclasse#nomeid{}
+
+*/
+
+h3{
+    color:red !important;
+}
+
+/*********************
+tabella
+*/
+
+table{
+    width: 100%;
+}
+table td{
+    border: 1px solid #000
+}
+
+table tr:nth-of-type(odd){
+    background-color:#ccc
+}

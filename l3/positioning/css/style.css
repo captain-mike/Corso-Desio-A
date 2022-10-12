@@ -1,0 +1,116 @@
+/*
+Sticky
+*/
+#sticky-header{
+    height: 70px;
+    width: 100%;
+    background-color: chocolate;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/*
+Absolute
+*/
+.esempio-absolute{
+    background-color: aqua;
+    height: 50vh;
+    width: 50vh;
+    margin:30px auto;
+    position:relative;
+}
+.esempio-absolute > div{
+    height: 100px;
+    width: 100px;
+    background-color:red;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    position: absolute;
+}
+
+.esempio-absolute > div:nth-child(4){
+    bottom: 0;
+    right: 0;
+}
+.esempio-absolute > div:nth-child(3){
+    bottom: 0;
+    left: 0;
+}
+.esempio-absolute > div:nth-child(2){
+    top: 0;
+    right: 0;
+}
+/*
+Relative
+*/
+.esempio-relative{
+    background-color:grey;
+    padding: 15px;
+}
+.esempio-relative > div{
+    background-color: white;
+    height: 50px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    border-radius:5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.esempio-relative > div:nth-child(3){
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+/*
+Fixed
+*/
+
+.notifica{
+    width: 200px;
+    height: 70px;
+    background-color:darksalmon;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 3px solid coral;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+/*
+Z-index
+*/
+
+.quadrato{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    position: absolute;
+}
+.quadrato:nth-of-type(1){
+    background-color:red;
+    z-index:4;
+}
+.quadrato:nth-of-type(2){
+    background-color:yellow;
+    top: 50px;
+    left: 50px;
+    z-index:3;
+}
+.quadrato:nth-of-type(3){
+    background-color:purple;
+    top: 100px;
+    left: 100px;
+    z-index:2;
+}
+.quadrato:nth-of-type(4){
+    background-color:blue;
+    top: 150px;
+    left: 150px;
+    z-index:3;
+}
+

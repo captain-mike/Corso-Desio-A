@@ -1,0 +1,50 @@
+.prospettiva{
+    perspective:300px;
+    transform-style: preserve-3d;
+    height: 100vh;
+}
+#cubo{
+    perspective:300px;
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+.faccia{
+    width: 200px;
+    height: 200px;
+    border:1px solid #000;
+    position:absolute;
+}
+.retro{
+    background-color: blue;
+    transform:translateZ(-100px)
+}
+.front{
+    background-color: blue;
+    transform:translateZ(0px)
+}
+.dx{
+    background-color: green;
+    right:-202px;
+    transform: rotateY(90deg);
+    transform-origin: left
+}
+.sx{
+    background-color: green;
+    left:-202px;
+    transform: rotateY(-90deg);
+    transform-origin: right
+}
+.sopra{
+    background-color: red;
+    top:-202px;
+    transform: rotateX(90deg);
+    transform-origin: bottom
+}
+.sotto{
+    background-color: red;
+    bottom:-202px;
+    transform: rotateX(-90deg);
+    transform-origin: top
+}

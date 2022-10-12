@@ -1,0 +1,13 @@
+div{
+    color:red
+}
+.blue{
+    color: blue;
+}
+#green{
+    color: green;
+}
+
+div:nth-of-type(3){/* prendi il terzo div che appare dall'alto */
+    background-color: black
+}

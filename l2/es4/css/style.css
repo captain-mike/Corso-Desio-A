@@ -1,0 +1,36 @@
+.blocco{
+    width: 150px;
+    height: 150px;
+    overflow-y: auto
+}
+.blocco2{
+    min-width: 150px;
+    min-height: 150px;
+    background-color:red
+}
+
+.blocco3{
+    width: 150px;
+    height: 150px;
+    padding: 15px;
+    /*
+    padding: 15px 15px 15px 15px;
+
+    padding-top:15px;
+    padding-right:15px;
+    padding-bottom:15px;
+    padding-left:15px;
+    */
+    overflow-y: auto;
+    background-color:blue;
+    box-sizing: border-box;
+
+    border: 5px solid black;
+    border-bottom: none;
+
+    border-top-left-radius: 15%;
+
+
+    margin-top: -100px;
+    margin-left: 200px;
+}

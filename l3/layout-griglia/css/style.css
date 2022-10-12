@@ -1,0 +1,27 @@
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+
+.blog{
+    background-color: #ccc;
+    margin-bottom:50px
+}
+.articolo{
+    width: calc(100% / 4 - 10px);
+    height: 200px;
+    background-color: bisque;
+    display: inline-block;
+    /* correzione del gap naturale degli elementi inline-block
+    margin-left: -0.3rem;*/
+    margin: 5px;
+    margin-left: calc(5px - 0.3rem);
+}
+
+#main-footer{
+    background-color:blue;
+    min-height: 300px;
+    padding: 15px;
+    box-sizing: border-box;
+}
