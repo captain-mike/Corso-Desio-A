@@ -1,0 +1,163 @@
+h3{
+    font-weight: bold;
+    font-size:1.3rem;
+    margin-top:50px;
+    margin-bottom:-20px;
+    border-top:1px solid #000;
+    text-align:center;
+}
+.griglia{
+    width: 90%;
+    margin: 30px auto;
+    background-color:cadetblue;
+    display: flex;
+}
+.griglia-fissa{
+    height: 150px;
+}
+.griglia-fissa-alta{
+    height: 300px;
+}
+
+.griglia > div{
+    height: 100px;
+    width: 100px;
+    background-color:orange;
+    border: 1px solid rgb(99, 64, 0);
+}
+.griglia > div.col{
+    width: auto;
+}
+
+#a2{
+    flex-direction: row-reverse;
+}
+#a3{
+    flex-direction: column;
+}
+#a4{
+    flex-direction: column-reverse;
+}
+#a5{
+    flex-wrap: wrap;
+}
+#a6{
+    flex-wrap: wrap-reverse;
+}
+#a7{
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 306px;
+    width: 250px;
+}
+
+#a8{
+    justify-content: flex-end;
+}
+#a9{
+    justify-content: space-between;
+}
+#a10{
+    justify-content: space-around;
+}
+#a11{
+    justify-content: center;
+}
+#a12{
+    justify-content: space-evenly;
+}
+#a13{
+    align-items: flex-end;
+}
+#a14{
+    align-items: center;
+}
+#a15{
+    align-items: stretch;
+}
+#a15 > div{
+    height: auto;
+}
+
+#a16{
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+#a17{
+    flex-wrap: wrap;
+    align-content: center;
+}
+#a18{
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+#a18 > div{
+    height: auto;
+}
+
+#a19{
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+#a20{
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+#a21 div:nth-of-type(1){
+    order: 2;
+}
+#a21 div:nth-of-type(2){
+    order: 1;
+}
+#a21 div:nth-of-type(3){
+    order: 4;
+}
+#a21 div:nth-of-type(4){
+    order: -1;
+}
+
+
+/*dimensioni*/
+
+#a22 .col{
+    flex-grow: 1;
+}
+#a22 .col:nth-of-type(2){
+    flex-grow: 2;
+}
+
+#a23 .col{
+    width: 100px;
+    flex-grow: 1;
+}
+#a23 .col:nth-of-type(2){
+    flex-shrink: 5;
+}
+#a23 .col:nth-of-type(3){
+    flex-shrink: 2;
+}
+
+#a24 .col{
+    flex-basis: 25%;
+}
+#a24 .col:nth-of-type(2){
+    flex-basis: 50%;
+}
+
+#a25 .col{
+    flex: 1 0 25%;
+}
+
+#a26{
+    flex-direction: column;
+}
+#a26 .col{
+    flex-grow: 1;
+}
+
+@media screen and (min-width:570px){
+    #a26{
+        flex-direction: row;
+    }
+}
