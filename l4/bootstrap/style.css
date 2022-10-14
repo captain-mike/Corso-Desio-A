@@ -1,0 +1,15 @@
+:root{
+    --colore-primario: #970000;
+    --bs-primary: #fd0de9;
+    --bs-primary-rgb: #fd0de9;
+    --bs-blue: #fd0de9;
+}
+
+.bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity))!important;
+}
+
+span{
+    color:var(--colore-primario)
+}
