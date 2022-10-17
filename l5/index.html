@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        var x = 5;
+        let y = 5;
+
+        {
+            console.log(y)
+        }
+
+
+        {
+            let a = 1;
+            console.log(a);
+        }
+        let a = 2;
+        console.log(a);
+
+        {
+            var s = 3;
+            console.log(s);
+        }
+        console.log(s);
+
+
+        const G = 5;
+        
+        const obj = {
+            nome:'Mario',
+            cognome: 'Rossi'
+        } 
+        obj.nome = 'Giovanni'
+        console.log(obj)
+
+        //object freeze: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze?retiredLocale=it
+
+        /*
+        Commento su 
+        più righe
+        */
+
+
+        let mioNome = 'Mario';
+
+
+        function log(){
+            var f = 5;
+            console.log(f);
+            console.log(x);
+        }
+        log();
+        //console.log(f); errore
+
+
+
+        let u;
+        console.log(u)//undefined
+
+        //console.log(i) errore: not defined
+
+        //console.log(o);//Cannot access 'o' before initialization
+        let o = 'Ciao'
+
+
+        /*concatenamento di stringa*/
+
+        let html = "<div class=\"prova\">"
+        let html2 = '<div class="prova">'
+        let testo = 'Questo è il testo del div'
+
+        document.write( html + testo + '</div>' )
+        document.write( `<div class="prova">${testo}</div>` )
+
+        
+
+        
+    </script>
+</body>
+</html>

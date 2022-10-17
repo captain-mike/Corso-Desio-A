@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="testoRosso">Testo</div>
+    <div class="sfondoGiallo">Testo</div>
+    <div class="sfondoGiallo">Testo</div>
+    <div>Testo</div>    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+
+        {
+            //versione js classico
+            let testoRosso = document.getElementById("testoRosso")//1 solo oggetto
+            console.log(testoRosso)
+            console.dir(testoRosso)
+            testoRosso.style.color = 'red';
+            
+            let sfondoGiallo = document.getElementsByClassName('sfondoGiallo')//lista di oggetti
+            console.log(sfondoGiallo)
+            
+            //devo prendere singolarmente ogni elemento o ciclare la lista
+            //sfondoGiallo[0].style.backgroundColor = 'yellow';
+            //sfondoGiallo[1].style.backgroundColor = 'yellow';
+            
+            
+            let div = document.getElementsByTagName('div')//lista di oggetti
+            console.log(div)
+            //div[3].style.backgroundColor = 'green';
+        }
+
+        {
+            //versione jQuery
+            let testoRosso = $("#testoRosso");//sceglie se restituire una lista o un solo elemento
+            testoRosso.css('color','red');
+
+            let sfondoGiallo = $('.sfondoGiallo');
+            sfondoGiallo.css('background-color','yellow');//cicla tutti gli elementi e li modifica
+
+            let div = $('div')
+            div.eq(3).css('background-color','green');//posso selezionare un solo elemento dell'array
+
+        }
+
+        {
+            let testoRosso = document.querySelector("#testoRosso")//restituisce un solo elemento
+            let sfondoGiallo = document.querySelector('.sfondoGiallo')//il primo elemento con la classe sfondoGiallo
+            let sfondoGialloArray = document.querySelectorAll('.sfondoGiallo')//tutti gli elementi con la classe sfondoGiallo
+            let div = document.querySelectorAll('div')
+            div[3].style.backgroundColor = 'green';
+        }
+
+        
+
+    </script>
+</body>
+</html>

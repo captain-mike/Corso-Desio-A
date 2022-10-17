@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="test">prova</div>
+    <div id="test2">prova2</div>
+    
+    <script>
+
+        function miaFunzione(){
+            //esegui qualcosa
+        }
+
+        function saluto(){
+            console.log('Ciao')
+        }
+        saluto()
+
+        function restituisciSaluto(){
+            return 'Ciao';
+        }
+
+        let s = restituisciSaluto();
+        console.log(s);
+        console.log(restituisciSaluto());
+
+        /*
+        funzioni freccia
+        */
+
+        let somma = () => {
+            return  2 + 3;
+        }
+        console.log(somma())
+        
+        //su una sola riga
+        let somma2 = () => 2 + 3
+        console.log(somma2())
+
+
+        //con un solo parametro
+        let raddoppia = a => a * 2;
+        console.log(raddoppia(2));
+
+        let moltiplica = (a,b) => a * b;
+
+        console.log(moltiplica(2,3))
+
+
+        /*
+        utilizzo di funzioni freccia come callback
+        */
+        let test = document.getElementById('test');
+        test.addEventListener('click',function(){
+            console.log(this)//this è l'elemento cliccato
+        })
+
+        let test2 = document.getElementById('test2');
+        test2.addEventListener('click',() => {
+            console.log(this)//this è l'oggetto window
+        })
+        
+
+    </script>
+</body>
+</html>

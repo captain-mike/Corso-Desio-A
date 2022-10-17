@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let arr = [];//array
+        let obj = {};//obj
+
+
+        let animali = ['Gatto','Cane','Papera','Serpente'];
+
+        console.log(animali.length);//quantità di elementi nell'array
+        console.log(animali[animali.length-1]);
+
+        console.log('Gatto'.length)//la proprietà length è comune anche alle stringhe
+
+        animali.push('Tartaruga')//aggiungo un animale alla fine dell'array
+
+        console.log(animali)
+        
+        let eliminato = animali.pop()//rimuovo l'ultimo elemento dell'array
+        console.log(`Hai eliminato l'animale: ${eliminato} dall'array`)
+
+        animali.unshift('Tartaruga')
+        console.log(animali)
+        let eliminato2 = animali.shift('Tartaruga')
+        console.log(`Hai eliminato l'animale: ${eliminato2} dall'array`)
+
+
+        /*
+        eliminare da un array
+        */
+        animali = ['Gatto','Cane','Papera','Serpente'];
+        let partenza = 1;
+        let quantità = 1;
+        animali.splice(partenza,quantità)//elimino 1 elemento a partire dall'indice 1
+        console.log(animali)
+        
+        animali.splice(2,1,'Pitone')
+        console.log(animali)
+
+
+        //usando indexof per trovare la stringa
+        function trovaElimina(){
+            let index = animali.indexOf('Papera')
+            animali.splice(index,1)
+        }
+        trovaElimina()
+        console.log(animali)
+
+
+        let utenti = [
+            {
+                nome:'Mario',
+                cognome:'Rossi'
+            },
+            {
+                nome:'Maria',
+                cognome:'Bianchi'
+            }
+        ]
+
+        function trovaEliminaUtenti(){
+            let index = utenti.findIndex(u => u.nome == 'Maria')
+            console.log(index)
+            utenti.splice(index,1)
+        }
+        trovaEliminaUtenti();
+        console.log(utenti)
+
+        /*
+        esclusione usando for + if
+        */
+
+        utenti = [
+            {
+                nome:'Mario',
+                cognome:'Rossi'
+            },
+            {
+                nome:'Maria',
+                cognome:'Bianchi'
+            }
+        ]
+
+        {
+
+            let utentiTrovati = [];
+            
+            for(let i = 0; i < utenti.length; i++){
+                
+                if(utenti[i].nome != 'Mario')
+                utentiTrovati.push(utenti[i])
+                
+            }
+            
+            console.log(utentiTrovati)
+        }
+
+        /*
+        find
+        */
+
+        utenti = [
+            {
+                nome:'Mario',
+                cognome:'Rossi'
+            },
+            {
+                nome:'Maria',
+                cognome:'Bianchi'
+            }
+        ]
+
+        {
+            let utentiTrovati = utenti.filter(u => u.nome != 'Mario')
+            console.log(utentiTrovati)
+        }
+
+
+        /*
+        destrutturazione
+        */
+
+        let dati = [1,'Mario','Rossi']
+        let [id,nomeUtente,cognomeUtente] = dati;
+
+        console.log(nomeUtente)
+
+
+        let {nome,cognome} = {nome:'Mario',cognome:'Rossi'}
+        console.log(cognome)
+
+
+        
+    </script>
+
+
+    <form id="mioForm">
+        <input type="text" class="validate" id="nome" placeholder="nome">
+        <input type="text" class="validate" id="cognome" placeholder="cognome">
+        <input type="submit">
+    </form>
+
+    <script>
+
+        document.querySelector('#mioForm')
+        .addEventListener('submit',function(e){
+            e.preventDefault();//blocco il form
+
+            let campi = document.querySelectorAll('.validate')
+
+            let [nome,cognome] = campi
+
+        })
+
+    </script>
+    
+</body>
+</html>
