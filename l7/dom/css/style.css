@@ -1,0 +1,17 @@
+#menu-toggle{
+    margin-left: 300px;
+}
+.off-canvas-menu{
+    width: 300px;
+    background-color: bisque;
+    height:100vh;
+    position: fixed;
+    top: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    left: -300px;
+}
+
+p{
+    font-size: 2rem;
+}

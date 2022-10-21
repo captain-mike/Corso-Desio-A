@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        for (let i = 0; i < 10; i++) {
+            console.log(i);
+        }
+
+        let frutta = ['Pere', 'Mele', 'Banane', 'Uva'];
+
+        for (let i = 0; i < frutta.length; i++) {
+            document.write(frutta[i] + ' ');
+        }
+
+        document.write('<hr>')
+        frutta.forEach((el, i) => {
+            document.write(`${i} ${el} `)
+        })
+
+        document.write('<hr>')
+
+        let fruttaBold = frutta.map(el => `<b>${el}</b>`)
+
+        fruttaBold.forEach((el, i) => {
+            document.write(`${i} ${el} `)
+        })
+
+        document.write('<hr>')
+        for (let lettera of 'ciao') {
+            document.write(lettera + ', ')
+        }
+
+        document.write('<hr>')
+        for (let f of frutta) {
+            document.write(f + ', ')
+        }
+
+        document.write('<hr>')
+        let fruttoObj = {
+            nome: 'Mela',
+            prezzo: 0.5,
+            qty: 10
+        }
+
+        document.write('<table><tr>')
+
+        for (var prop in fruttoObj) {
+            document.write(`<th>${prop}</th>`)
+        }
+        document.write('</tr></table>')
+
+        document.write('<hr>')
+
+        let fruttiObjArray = [
+            {
+                nome: 'Mela',
+                prezzo: 0.5,
+                qty: 10
+            },
+            {
+                nome: 'Pera',
+                prezzo: 0.4,
+                qty: 1
+            },
+            {
+                nome: 'Banana',
+                prezzo: 0.99,
+                qty: 20
+            },
+        ]
+
+        let colonneMostrate = ['nome','prezzo','qty']//proprietà che verranno mostrate
+
+        document.write('<table>')
+        document.write('<tr>')
+            //costruzione delle intestazioni della tabella
+            for (var prop in fruttiObjArray[0]) {//uso uno degli oggetti dell'array per recuperare i nomi delle colonne
+                if(colonneMostrate.includes(prop)){//controllo se prop contiene il nome di una proprietà accettata
+                    document.write(`<th>${prop}</th>`)//creo la th contenente il nome della proprietà
+                }
+            }
+
+        document.write('</tr>')
+        for (let f of fruttiObjArray) {//inizio a ciclare tutti gli oggetti per mostrarne i valori
+                document.write('<tr>')
+                for (var prop in f) {//f è un singolo frutto
+                    if(colonneMostrate.includes(prop)){
+                        document.write(`<td>${f[prop]}</td>`)//con la sintasi oggetto[nome proprietà] posso recuperare il valore
+                    }
+                }
+                document.write('</tr>')
+            }
+        document.write('</table>')
+
+
+        /*
+        altri metodi ciclici array
+        */
+
+        let x = [1,2,'3']
+
+        let controllo = x.every(n => typeof n == 'number')//false
+        let controllo2 = x.some(n => typeof n == 'number')//true
+
+        console.log(controllo, controllo2)
+
+    </script>
+</body>
+
+</html>

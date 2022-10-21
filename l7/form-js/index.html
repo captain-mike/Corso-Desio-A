@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form id="myForm">
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="text" required minlength="5" id="nome" class="form-control validate" placeholder="Nome">
+                        </div>
+                        <div class="col-6 mb-3">
+                            <input type="text" required data-empty-error="Ricordati il cognome!" id="cognome" class="form-control validate" placeholder="Cognome"> <!--pattern="[a-z]{0,20}">-->
+                        </div>
+                        <div class="col-6">
+                            <input type="email" required pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}" data-empty-error="Devi inserire la tua e-mail" id="email" class="form-control validate" placeholder="Email">
+                        </div>
+                        <div class="col-6 mb-3">
+                            <input type="password" data-empty-error="La password è obbligatoria" id="password" class="form-control validate" placeholder="Password">
+                            <input type="password" data-empty-error="Devi confermare la password" id="conferma-password" class="form-control validate" placeholder="Conferma password">
+                        </div>
+                        <div class="col-6">
+                            <select id="city" class="form-control">
+                                <option value="">--</option>
+                                <option value="roma">Roma</option>
+                                <option value="milano">Milano</option>
+                                <option value="verona">Verona</option>
+                                <option value="napoli">Napoli</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <select id="sesso" class="form-control">
+                                <option value="">--</option>
+                                <option value="m">Maschio</option>
+                                <option value="f">Femmina</option>
+                                <option value="a">Altro</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="consent">Acconsento al trattamento dei dati</label>
+                            <input type="checkbox" id="consent">
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary">Registrati</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
